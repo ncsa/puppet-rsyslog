@@ -29,7 +29,7 @@ class rsyslog::base {
   }
 
   $feature_packages_parms = $rsyslog::manage_service ? {
-    true => {'notify' => Service[$rsyslog::service_name],},
+    true    => {'notify' => Service[$rsyslog::service_name],},
     default => {},
   }
 
